@@ -34,13 +34,25 @@ logger = logging.getLogger(__name__)
 # update. Error handlers also receive the raised TelegramError object in error.
 def start(update, context):
     """Send a message when the command /start is issued."""
-    update.message.reply_text('Hola uwu!')
-
+    update.message.reply_text('Hola uwu
+    Mi creador es @pecadodelaira')
 
 def help(update, context):
     """Send a message when the command /help is issued."""
-    update.message.reply_text('Help!')
+    update.message.reply_text('Mis comandos no estan definidos aun estoy en desarrollo u.u')
 
+def kissaten (update, context):
+    """Send a message when the command /kissaten is issued."""
+    update.message.reply_text('El mejor roleplay de café maid que hay en telegram umu 
+Contamos con los mejores bots y lattes de telegram, podrías socializar con los miembros en el grupo
+
+~Porque no pruebas un latte de izuku midoriya o los distintos sabores 
+
+~Trata de competir en las dinámicas con los miembros
+
+Tenemos tu propio espacio para que te sientas cómodo con nosotros
+
+PD: se aceptan todos los idiomas y personalidades')
 
 def echo(update, context):
     """Echo the user message."""
@@ -81,6 +93,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CommandHandler("sumar", sumar))
+     dp.add_handler(CommandHandler("kissaten", kissaten))
 
     # on noncommand i.e message - echo the message on Telegram
     dp.add_handler(MessageHandler(Filters.text, pizza))
